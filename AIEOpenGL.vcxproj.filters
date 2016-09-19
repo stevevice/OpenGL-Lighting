@@ -103,12 +103,12 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
+    <None Include="README.md" />
     <None Include="bin\shaders\phong.frag">
-      <Filter>Tutorials\lighting</Filter>
+      <Filter>Resource Files\shaders</Filter>
     </None>
     <None Include="bin\shaders\phong.vert">
-      <Filter>Tutorials\lighting</Filter>
+      <Filter>Resource Files\shaders</Filter>
     </None>
-    <None Include="README.md" />
   </ItemGroup>
 </Project>
