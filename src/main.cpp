@@ -1,4 +1,3 @@
- 
 #include "LightingOBJApplication.h"
 #include "LightingSphereApplication.h" 
 
