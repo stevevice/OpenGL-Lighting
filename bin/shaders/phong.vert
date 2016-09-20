@@ -1,12 +1,20 @@
-// // classic Phong equation
+// classic Phong equation
 #version 410
 
-/*uniform vec3 lightDirection;
-uniform vec3 Id;
-uniform vec3 Is;
-uniform vec3 Ia;
-uniform vec3 cameraposition*/
+layout(location=0) in vec4 Position;
+layout(location=2) in vec4 Normal;
+
+out vec4 vPosition;
+out vec4 vNormal;
+
+uniform mat4 ProjectionViewModel;
+uniform mat4 ModelMatrix;
+uniform mat4 NormalMatrix;
+
 void main() 
-{
- 
+{	
+	vPosition = ModelMatrix * Position;
+	vNormal = NormalMatrix * Normal;
+
+	gl_Position = ProjectionViewModel * Position;
 }

@@ -99,6 +99,9 @@ bool LightingOBJApplication::update(float deltaTime) {
 
 	vec4 white(1, 1, 1, 0);
 	vec4 black(0, 0, 0, 1);
+	//vec4 gray(.25, .25, .25, 1);
+
+	//mat4 sphere = mat4(1);
 
 	// for now let's add a grid to the gizmos
 	for (int i = 0; i < 21; ++i) {
@@ -107,7 +110,7 @@ bool LightingOBJApplication::update(float deltaTime) {
 		Gizmos::addLine(vec3(10, 0, -10 + i), vec3(-10, 0, -10 + i),
 						i == 10 ? white : black);
 	}
-
+	//Gizmos::addSphere(sphere, 3, 50, 50, gray, &sphere); //Sun
 	Gizmos::addTransform(mat4(1));
 
 	// return true, else the application closes
